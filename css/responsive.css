@@ -1,0 +1,172 @@
+/* ==========================================================================
+   RESPONSIVE STYLING
+   Breakpoints: 1024px (Laptops/Tablets), 768px (Tablets), 480px (Mobiles)
+   ========================================================================== */
+
+/* Laptop / Small Desktop */
+@media (max-width: 1024px) {
+    :root {
+        --container-width: 900px;
+    }
+    
+    .section-title {
+        font-size: 2.35rem;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    :root {
+        --container-width: 100%;
+    }
+    
+    .container {
+        padding-inline: 1.25rem;
+    }
+    
+    .site-header {
+        padding: 0.85rem 0;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-section {
+        padding-top: 6rem;
+        padding-bottom: 3.5rem;
+        min-height: auto;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.98rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 2.75rem;
+        margin-top: 2rem;
+    }
+
+    .project-video-box.is-portrait,
+    .video-frame-wrapper.is-portrait {
+        width: min(100%, 340px);
+        max-height: min(72vh, 620px);
+    }
+
+    .intro-video-container.is-portrait {
+        max-width: 340px;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .review-image-wrap {
+        height: 320px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .cta-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cta-header .section-title {
+        font-size: 1.85rem;
+    }
+    
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .container {
+        padding-inline: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .brand-logo {
+        font-size: 1.1rem;
+    }
+    
+    .brand-badge {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .project-title {
+        font-size: 1.2rem;
+    }
+    
+    .project-description {
+        font-size: 0.92rem;
+    }
+    
+    .play-button {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .play-button svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .review-image-wrap {
+        height: 280px;
+    }
+    
+    .cta-box {
+        padding: 1.75rem 1.15rem;
+        border-radius: var(--radius-md);
+    }
+    
+    .btn-primary {
+        padding: 0.95rem 1.25rem;
+        font-size: 1rem;
+    }
+    
+    .lightbox-modal {
+        padding: 1rem;
+    }
+    
+    .toast-container {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+    }
+    
+    .toast {
+        width: 100%;
+    }
+}
