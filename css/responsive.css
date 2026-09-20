@@ -1,0 +1,282 @@
+/* ==========================================================================
+   RESPONSIVE STYLING
+   Breakpoints: 1024px (Laptops/Tablets), 768px (Tablets), 480px (Mobiles)
+   ========================================================================== */
+
+/* Laptop / Small Desktop */
+@media (max-width: 1024px) {
+    :root {
+        --container-width: 900px;
+    }
+    
+    .section-title {
+        font-size: 2.35rem;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    :root {
+        --container-width: 100%;
+    }
+    
+    .container {
+        padding-inline: 1.25rem;
+    }
+    
+    .site-header {
+        padding: 0.85rem 0;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-section {
+        padding-top: 6rem;
+        padding-bottom: 3.5rem;
+        min-height: auto;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.98rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.35rem 0.7rem;
+        margin-top: 2rem;
+    }
+
+    .project-card:not(.is-portrait),
+    .project-card.is-landscape {
+        grid-column: 1 / -1;
+    }
+
+    .project-card.is-portrait {
+        grid-column: span 1;
+        align-items: stretch;
+    }
+
+    .project-card.is-portrait .project-video-box,
+    .project-video-box.is-portrait {
+        width: 100%;
+        max-height: none;
+        margin-inline: 0;
+    }
+
+    .project-card.is-portrait .project-meta {
+        max-width: 100%;
+        padding-inline: 0.1rem;
+        margin-top: 0.7rem;
+    }
+
+    .project-card.is-portrait .project-title {
+        font-size: 0.95rem;
+        line-height: 1.35;
+    }
+
+    .project-card.is-portrait .project-description {
+        font-size: 0.78rem;
+        line-height: 1.5;
+    }
+
+    .project-card.is-portrait-solo {
+        grid-column: 1 / -1;
+        max-width: 52%;
+        justify-self: center;
+    }
+
+    .project-card.is-landscape .project-video-box {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        max-height: none;
+    }
+
+    .video-frame-wrapper.is-portrait {
+        width: min(100%, 340px);
+        max-height: min(72vh, 620px);
+    }
+
+    .intro-video-container.is-portrait {
+        max-width: 340px;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .review-image-wrap {
+        height: 320px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.85rem;
+    }
+
+    .contact-form {
+        gap: 0.95rem;
+    }
+
+    .form-label {
+        font-size: 0.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: 0.72rem 0.8rem;
+        font-size: 0.88rem;
+    }
+
+    .form-select {
+        padding-left: 2.1rem;
+        background-position: left 0.7rem center;
+        background-size: 1.05rem;
+    }
+
+    .form-textarea {
+        min-height: 110px;
+    }
+
+    .cta-box {
+        padding: 1.5rem 1rem;
+        border-radius: var(--radius-md);
+    }
+    
+    .cta-header .section-title {
+        font-size: 1.85rem;
+    }
+    
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.25rem;
+    }
+
+    .footer-social {
+        order: -1;
+        gap: 1rem;
+    }
+
+    .social-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .container {
+        padding-inline: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .brand-logo {
+        font-size: 1.1rem;
+    }
+    
+    .brand-badge {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .project-title {
+        font-size: 1.2rem;
+    }
+
+    .project-card.is-portrait .project-title {
+        font-size: 0.86rem;
+    }
+    
+    .project-description {
+        font-size: 0.92rem;
+    }
+
+    .project-card.is-portrait .project-description {
+        font-size: 0.74rem;
+    }
+    
+    .play-button {
+        width: 56px;
+        height: 56px;
+    }
+
+    .project-card.is-portrait .play-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .project-card.is-portrait .play-button svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .form-label {
+        white-space: normal;
+        line-height: 1.35;
+        font-size: 0.75rem;
+    }
+
+    .cta-box {
+        padding: 1.25rem 0.85rem;
+    }
+
+    .project-card.is-portrait-solo {
+        max-width: 58%;
+    }
+    
+    .play-button svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .review-image-wrap {
+        height: 280px;
+    }
+    
+    .btn-primary {
+        padding: 0.95rem 1.25rem;
+        font-size: 1rem;
+    }
+    
+    .lightbox-modal {
+        padding: 1rem;
+    }
+    
+    .toast-container {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+    }
+    
+    .toast {
+        width: 100%;
+    }
+}
